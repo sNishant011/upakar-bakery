@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@400;500;700&family=Jost:wght@300;400&family=Satisfy&display=swap");
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f759ab;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c41d7f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+nav {
+  padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+  position: fixed !important;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05) !important;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+nav img {
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+nav .nav-link {
+  color: #000 !important;
+}
+
+nav a {
+  text-transform: initial;
+  font-size: 1.1rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  border-radius: 8px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #eb2f96;
+  color: #fff !important;
+}
+
+nav #navbar {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+nav .dropdown-item {
+  color: #000;
+  font-size: 1rem;
+  font-family: "Jost", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .dropdown-item:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #eb2f96;
+}
+
+nav .dropdown-menu {
+  padding: 0 !important;
+}
+
+nav .form-inline input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+nav .form-inline input:-ms-input-placeholder {
+  color: #fff;
+}
+
+nav .form-inline input::-ms-input-placeholder {
+  color: #fff;
+}
+
+nav .form-inline input::placeholder {
+  color: #fff;
+}
+
+nav .form-inline .form-control {
+  font-family: "Jost", sans-serif;
+  background-color: #8c0000;
+  border: 0px solid #ff008e !important;
+  letter-spacing: 0.1rem;
+  border-radius: 50px;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+nav .form-inline .form-control:focus {
+  -webkit-transition: 0.2;
+  transition: 0.2;
+  border: initial;
+  -webkit-box-shadow: 0 0 0 0.2rem #ffadd2;
+          box-shadow: 0 0 0 0.2rem #ffadd2;
+}
+
+nav .form-inline button {
+  font-family: "Jost", sans-serif;
+  letter-spacing: 0.2rem;
+  border-color: #fff !important;
+  border-radius: 50px;
+  background-color: #660003;
+  color: #fff !important;
+}
+
+nav .form-inline button:hover {
+  color: #fff !important;
+  background-color: #f759ab !important;
+}
+
+.carousel-item {
+  height: 80vh !important;
+}
+
+.carousel-item img {
+  height: 80vh !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.birthday-cakes h1 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: #eb2f96;
+  font-size: clamp(25px, 2rem, 2.5rem);
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0.5rem;
+  margin-top: 2rem;
+}
+
+.birthday-cakes .card-grid {
+  margin: 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+@media (min-width: 840px) {
+  .birthday-cakes .card-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .birthday-cakes .card-grid {
+    grid-gap: 0.5rem;
+    margin: 0.5rem;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.birthday-cakes .card-grid .card {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.birthday-cakes .card-grid .card .details .h4,
+.birthday-cakes .card-grid .card .details p {
+  padding: 0.5rem 0 0.5rem 0.5rem !important;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-size: clamp(15px, 0.8rem, 0.9rem);
+  color: hotpink;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.birthday-cakes .card-grid .card .details p {
+  border-top: 1px solid rgba(216, 216, 216, 0.637);
+  font-size: clamp(15px, 0.7rem, 0.9rem);
+}
+
+.birthday-cakes .card-grid .card .details .h4 {
+  padding-top: 0 !important;
+  color: #f759ab;
+  font-size: clamp(20px, 1rem, 1.2rem);
+  font-family: "Dancing Script", cursive;
+}
+
+.birthday-cakes .card-grid .card .details .h3 {
+  padding: 1rem 0.5rem 0rem 0.5rem !important;
+  color: #eb2f96;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-size: clamp(25px, 1.3rem, 1.5rem);
+}
+
+.birthday-cakes .card-grid .card .card-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.birthday-cakes .card-grid .card .card-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.birthday-cakes .card-grid .card .card-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  background-color: #fff !important;
+  border: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: lighter !important;
+  letter-spacing: 0.1rem;
+}
+
+.birthday-cakes .card-grid .card .card-footer .btn-primary,
+.birthday-cakes .card-grid .card .card-footer .btn-secondary {
+  background-color: #f759ab !important;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.birthday-cakes .card-grid .card .card-footer .btn-primary:hover,
+.birthday-cakes .card-grid .card .card-footer .btn-secondary:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 15px #ff8cc0, 0px 0px 15px #ff8cc0;
+          box-shadow: 0px 0px 15px #ff8cc0, 0px 0px 15px #ff8cc0;
+}
+
+#see-more {
+  float: right;
+  font-size: 0.9rem;
+  font-family: "Jost", sans-serif;
+  background-color: #eb2f96;
+  color: #fff;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  margin-right: 2rem;
+}
+
+@media (max-width: 600px) {
+  #see-more {
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */
