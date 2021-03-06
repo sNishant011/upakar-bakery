@@ -115,16 +115,18 @@ nav .form-inline .form-control {
   letter-spacing: 0.1rem;
   border-radius: 50px;
   color: #fff;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: auto;
 }
 
 nav .form-inline .form-control:focus {
-  -webkit-transition: 0.2;
-  transition: 0.2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   border: initial;
   -webkit-box-shadow: 0 0 0 0.2rem #ffadd2;
           box-shadow: 0 0 0 0.2rem #ffadd2;
+  width: 300px;
 }
 
 nav .form-inline button {
@@ -191,6 +193,16 @@ nav .form-inline button:hover {
   width: 100%;
   padding: 0.5rem;
   margin: 0.5rem;
+  border: 0px solid #eb2f96 !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.birthday-cakes .card-grid .card:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
+          box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
 }
 
 .birthday-cakes .card-grid .card .details .h4,
@@ -279,5 +291,153 @@ nav .form-inline button:hover {
     margin-right: 0.5rem;
     font-size: 0.7rem;
   }
+}
+
+footer {
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  font-weight: 300;
+  height: auto;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e6e9f0), to(#eef1f5));
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+footer h2 {
+  padding: 0.2rem;
+  margin-left: 0.5rem;
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+}
+
+footer .info-links {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  font-size: clamp(15px, 1rem, 1.1rem);
+}
+
+footer .info-links .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  font-size: clamp(15px, 1rem, 1.1rem);
+}
+
+footer iframe {
+  width: 100%;
+}
+
+footer li {
+  padding: 0.3rem;
+  list-style: none;
+  color: #000;
+  margin-left: 0.5rem;
+  font-size: clamp(15px, 1rem, 1.1rem);
+}
+
+footer li img {
+  margin-right: 0.3rem;
+  width: 20px;
+  padding: 0.1rem;
+  padding-bottom: 0;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+footer li p {
+  padding: 0.3rem;
+  margin-left: 0.3rem;
+  color: #000;
+  font-size: clamp(15px, 1rem, 1.1rem);
+  letter-spacing: 0.1rem;
+}
+
+footer li .info-links .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  font-size: clamp(15px, 1rem, 1.1rem);
+}
+
+footer li a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #000;
+  z-index: 1;
+  font-size: clamp(15px, 1rem, 1.1rem);
+}
+
+footer li a::after {
+  content: "";
+  background: #eb2f96;
+  position: absolute;
+  z-index: -1;
+  left: -5px;
+  bottom: -2px;
+  width: 110%;
+  height: 10%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+footer li a:hover {
+  color: #fff;
+}
+
+footer li a:hover::after {
+  color: #fff;
+  left: -5px;
+  bottom: -2px;
+  width: 110%;
+  height: 120%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+footer .copyright {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  position: relative;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  border-top: 1px solid gray;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
+  font-size: clamp(15px, 1rem, 1.1rem);
+}
+
+@media (max-width: 900px) {
+  footer .info-links {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.about p {
+  padding-left: 0.5rem;
+  font-size: clamp(15px, 1rem, 1.1rem);
 }
 /*# sourceMappingURL=index.css.map */
