@@ -142,6 +142,11 @@ nav {
     padding: 0.5rem 0 0.5rem 0;
     margin: 0.5rem;
     margin-top: 2rem;
+    @include mobile(){
+      font-size: 1.1rem;
+      text-align: left;
+      margin-left: 0.5rem;
+    }
   }
   .card-grid {
     margin: 2rem;
@@ -213,6 +218,7 @@ nav {
         font-family: $josefin;
         font-weight: lighter !important;
         letter-spacing: 0.1rem;
+        grid-gap: 1rem;
         .btn-primary,
         .btn-secondary {
           background-color: #f759ab !important;
@@ -239,6 +245,7 @@ nav {
   @include mobile() {
     margin-right: 0.5rem;
     font-size: 0.7rem;
+    padding:0.5rem 0.8rem 0.5rem 0.8rem;
   }
 }
 footer {
@@ -269,6 +276,9 @@ footer {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
       font-size: clamp(15px, 1rem, 1.1rem);
+      @include mobile(){
+        grid-template-columns: repeat(1,1fr);
+      }
     }
   }
   iframe {
@@ -353,6 +363,7 @@ footer {
 @media (max-width: 900px) {
   footer .info-links {
     grid-template-columns: repeat(1, 1fr);
+
   }
 }
 .about {
