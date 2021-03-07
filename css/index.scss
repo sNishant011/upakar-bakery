@@ -85,6 +85,7 @@ nav {
     transition: 0.3s;
     &:hover {
       transition: 0.3s;
+      color: #fff;
       background: #eb2f96;
     }
   }
@@ -121,17 +122,20 @@ nav {
       border-radius: 50px;
       background-color: #660003;
       color: #fff !important;
-      &:hover {
+      &:hover, &:focus {
         color: #fff !important;
         background-color: #f759ab !important;
+        border:4px solid #c41d7f !important;
       }
     }
   }
 }
 .carousel-item {
   height: 80vh !important;
+  @include mobile(){
+    height: 60vh !important;
+  }
   img {
-    height: 80vh !important;
     object-fit: cover;
   }
 }
@@ -244,7 +248,7 @@ nav {
     }
   }
 }
-#see-more {
+.see-more {
   float: right;
   font-size: 0.9rem;
   font-family: $jost;

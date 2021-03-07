@@ -89,6 +89,7 @@ nav .dropdown-item {
 nav .dropdown-item:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #fff;
   background: #eb2f96;
 }
 
@@ -142,17 +143,23 @@ nav .form-inline button {
   color: #fff !important;
 }
 
-nav .form-inline button:hover {
+nav .form-inline button:hover, nav .form-inline button:focus {
   color: #fff !important;
   background-color: #f759ab !important;
+  border: 4px solid #c41d7f !important;
 }
 
 .carousel-item {
   height: 80vh !important;
 }
 
+@media (max-width: 600px) {
+  .carousel-item {
+    height: 60vh !important;
+  }
+}
+
 .carousel-item img {
-  height: 80vh !important;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -301,7 +308,7 @@ nav .form-inline button:hover {
           box-shadow: 0px 0px 15px #ff8cc0, 0px 0px 15px #ff8cc0;
 }
 
-#see-more {
+.see-more {
   float: right;
   font-size: 0.9rem;
   font-family: "Jost", sans-serif;
@@ -312,7 +319,7 @@ nav .form-inline button:hover {
 }
 
 @media (max-width: 600px) {
-  #see-more {
+  .see-more {
     margin-right: 0.5rem;
     font-size: 0.7rem;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
