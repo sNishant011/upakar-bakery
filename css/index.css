@@ -32,12 +32,10 @@ nav {
   padding: 0.5rem 0.5rem 0.5rem 1rem !important;
   position: fixed !important;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: white !important;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 1000;
 }
 
@@ -51,6 +49,20 @@ nav .nav-link {
   color: #000 !important;
 }
 
+nav .nav-link:hover {
+  border-radius: 8px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #eb2f96;
+  color: #fff !important;
+}
+
+@media (max-width: 600px) {
+  nav .nav-link {
+    padding-left: 1rem !important;
+  }
+}
+
 nav a {
   text-transform: initial;
   font-size: 1.1rem;
@@ -59,14 +71,6 @@ nav a {
   letter-spacing: 0.1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-nav a:hover {
-  border-radius: 8px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: #eb2f96;
-  color: #fff !important;
 }
 
 nav #navbar {
@@ -155,12 +159,13 @@ nav .form-inline button:hover {
 
 .birthday-cakes h1 {
   text-align: center;
-  font-family: "Dancing Script", cursive;
-  color: #eb2f96;
+  font-family: "Satisfy", cursive;
+  color: #ff008e;
   font-size: clamp(25px, 2rem, 2.5rem);
   padding: 0.5rem 0 0.5rem 0;
   margin: 0.5rem;
   margin-top: 2rem;
+  font-weight: 800 !important;
 }
 
 @media (max-width: 600px) {
@@ -168,6 +173,7 @@ nav .form-inline button:hover {
     font-size: 1.1rem;
     text-align: left;
     margin-left: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
 
@@ -204,13 +210,15 @@ nav .form-inline button:hover {
   border: 0px solid #eb2f96 !important;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
+          box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
 }
 
 .birthday-cakes .card-grid .card:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
-          box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
+  -webkit-box-shadow: 0px 0px 30px #4e003b, 0px 0px 30px #3a003a;
+          box-shadow: 0px 0px 30px #4e003b, 0px 0px 30px #3a003a;
 }
 
 .birthday-cakes .card-grid .card .details .h4,
@@ -275,6 +283,14 @@ nav .form-inline button:hover {
   color: #fff;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .birthday-cakes .card-grid .card .card-footer .btn-primary,
+  .birthday-cakes .card-grid .card .card-footer .btn-secondary {
+    font-size: 0.6rem !important;
+    padding: 0.6rem !important;
+  }
 }
 
 .birthday-cakes .card-grid .card .card-footer .btn-primary:hover,
