@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@400;500;700&family=Jost:wght@300;400&family=Satisfy&display=swap");
+$dancing: "Dancing Script", cursive;
+$satisfy: "Satisfy", cursive;
+$jost: "Jost", sans-serif;
+$josefin: "Josefin Sans", sans-serif;
+$desktop: 840px;
+$mobile: 600px;
+$tab: 800px;
+$primary: #800000;
+$secondary: #8c1a16;
+$lighter: #a65850;
+$border: #993831;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: #{$tab}) {
+    @content;
+  }
+}
+.product-details {
+    padding-top: 100px;
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+    grid-gap: 2rem;
+    margin: 0;
+    @include mobile(){
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+    .product-img {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .product-info{
+        h1{
+            font-family: $dancing;
+        }
+        h3{
+            font-family: 'Josefin Sans', sans-serif;
+            color: $secondary;
+            font-family: clamp(18px, 1.2rem, 1.5rem);
+        }
+        p{
+            font-size: 1rem;
+            color: $primary;
+            @include mobile(){
+                font-size: 0.8rem;
+            }
+        }
+        .buttons{
+            margin-top: 2rem;
+
+        }
+        a{
+            padding: 1rem 1.5rem 1rem 1.5rem;
+            background-color: $secondary;
+            font-family: $josefin;
+            color: #fff;
+            font-size: clamp(15px, 1.1rem, 1.5rem);
+            box-sizing: border-box;
+            box-shadow: 5px 5px 0px $lighter, -5px -5px 0px $primary;
+            transition: 0.3s ease;
+            &:hover{
+                text-decoration: none;
+                transition: 0.3s ease;
+                box-shadow: -5px -5px 0px $lighter, 5px 5px 0px $primary;
+
+            }
+        }
+    }
+  }
+}

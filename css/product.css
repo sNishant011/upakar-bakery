@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@400;500;700&family=Jost:wght@300;400&family=Satisfy&display=swap");
+.product-details {
+  padding-top: 100px;
+}
+
+.product-details .product-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+  grid-gap: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .product-details .product-grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.product-details .product-grid .product-img {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.product-details .product-grid .product-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-details .product-grid .product-info h1 {
+  font-family: "Dancing Script", cursive;
+}
+
+.product-details .product-grid .product-info h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #8c1a16;
+  font-family: clamp(18px, 1.2rem, 1.5rem);
+}
+
+.product-details .product-grid .product-info p {
+  font-size: 1rem;
+  color: #800000;
+}
+
+@media (max-width: 600px) {
+  .product-details .product-grid .product-info p {
+    font-size: 0.8rem;
+  }
+}
+
+.product-details .product-grid .product-info .buttons {
+  margin-top: 2rem;
+}
+
+.product-details .product-grid .product-info a {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  background-color: #8c1a16;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: clamp(15px, 1.1rem, 1.5rem);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 5px 5px 0px #a65850, -5px -5px 0px #800000;
+          box-shadow: 5px 5px 0px #a65850, -5px -5px 0px #800000;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.product-details .product-grid .product-info a:hover {
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: -5px -5px 0px #a65850, 5px 5px 0px #800000;
+          box-shadow: -5px -5px 0px #a65850, 5px 5px 0px #800000;
+}
+/*# sourceMappingURL=product.css.map */
