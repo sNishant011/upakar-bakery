@@ -11,13 +11,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f759ab;
+  background: #a65850;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #c41d7f;
+  background: #8c1a16;
 }
 
 body {
@@ -28,11 +28,19 @@ body {
   overflow-x: hidden;
 }
 
+.navbar-toggler-icon {
+  background-image: url("img/list.svg");
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
 nav {
   padding: 0.5rem 0.5rem 0.5rem 1rem !important;
   position: fixed !important;
   width: 100%;
-  background: white !important;
+  background: #993831 !important;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 5px;
@@ -46,15 +54,15 @@ nav img {
 }
 
 nav .nav-link {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 nav .nav-link:hover {
   border-radius: 8px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #eb2f96;
-  color: #fff !important;
+  background-color: #fff !important;
+  color: #8c1a16 !important;
 }
 
 @media (max-width: 600px) {
@@ -90,72 +98,84 @@ nav .dropdown-item:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #fff;
-  background: #eb2f96;
+  background: #8c1a16;
 }
 
 nav .dropdown-menu {
   padding: 0 !important;
 }
 
+nav .form-inline input {
+  font-size: 1rem;
+}
+
 nav .form-inline input::-webkit-input-placeholder {
   color: #fff;
+  font-size: 1rem;
 }
 
 nav .form-inline input:-ms-input-placeholder {
   color: #fff;
+  font-size: 1rem;
 }
 
 nav .form-inline input::-ms-input-placeholder {
   color: #fff;
+  font-size: 1rem;
 }
 
 nav .form-inline input::placeholder {
   color: #fff;
+  font-size: 1rem;
 }
 
 nav .form-inline .form-control {
   font-family: "Jost", sans-serif;
   background-color: #8c0000;
-  border: 0px solid #ff008e !important;
+  border: 0px solid #993831 !important;
   letter-spacing: 0.1rem;
   border-radius: 50px;
   color: #fff;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: auto;
 }
 
 nav .form-inline .form-control:focus {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border: initial;
-  -webkit-box-shadow: 0 0 0 0.2rem #ffadd2;
-          box-shadow: 0 0 0 0.2rem #ffadd2;
+  -webkit-box-shadow: 0 0 0 0.2rem #a65850;
+          box-shadow: 0 0 0 0.2rem #a65850;
   width: 300px;
 }
 
 nav .form-inline button {
   font-family: "Jost", sans-serif;
   letter-spacing: 0.2rem;
-  border-color: #fff !important;
+  border-color: #993831 !important;
   border-radius: 50px;
   background-color: #660003;
   color: #fff !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav .form-inline button:hover, nav .form-inline button:focus {
   color: #fff !important;
-  background-color: #f759ab !important;
-  border: 4px solid #c41d7f !important;
+  background-color: #800000 !important;
+  border: 4px solid #993831 !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .carousel-item {
-  height: 80vh !important;
+  height: 90vh !important;
 }
 
 @media (max-width: 600px) {
   .carousel-item {
-    height: 60vh !important;
+    height: 100% !important;
   }
 }
 
@@ -167,7 +187,7 @@ nav .form-inline button:hover, nav .form-inline button:focus {
 .birthday-cakes h1 {
   text-align: center;
   font-family: "Satisfy", cursive;
-  color: #ff008e;
+  color: #800000;
   font-size: clamp(25px, 2rem, 2.5rem);
   padding: 0.5rem 0 0.5rem 0;
   margin: 0.5rem;
@@ -214,18 +234,20 @@ nav .form-inline button:hover, nav .form-inline button:focus {
   width: 100%;
   padding: 0.5rem;
   margin: 0.5rem;
-  border: 0px solid #eb2f96 !important;
+  background: #8c1a16 !important;
+  border: 0px solid #420125 !important;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
-          box-shadow: 0px 0px 5px #eb2f96, 0px 0px 10px #eb2f96;
+  -webkit-box-shadow: 0px 0px 5px #a65850, 0px 0px 10px #993831;
+          box-shadow: 0px 0px 5px #a65850, 0px 0px 10px #993831;
+  color: #fff !important;
 }
 
 .birthday-cakes .card-grid .card:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0px 0px 30px #4e003b, 0px 0px 30px #3a003a;
-          box-shadow: 0px 0px 30px #4e003b, 0px 0px 30px #3a003a;
+  -webkit-box-shadow: 0px 0px 30px #a65850, 0px 0px 30px #a65850;
+          box-shadow: 0px 0px 30px #a65850, 0px 0px 30px #a65850;
 }
 
 .birthday-cakes .card-grid .card .details .h4,
@@ -235,7 +257,6 @@ nav .form-inline button:hover, nav .form-inline button:focus {
   font-family: "Dancing Script", cursive;
   font-weight: 400;
   font-size: clamp(15px, 0.8rem, 0.9rem);
-  color: hotpink;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -245,15 +266,15 @@ nav .form-inline button:hover, nav .form-inline button:focus {
 }
 
 .birthday-cakes .card-grid .card .details .h4 {
+  color: #fff;
   padding-top: 0 !important;
-  color: #f759ab;
   font-size: clamp(20px, 1rem, 1.2rem);
   font-family: "Dancing Script", cursive;
 }
 
 .birthday-cakes .card-grid .card .details .h3 {
+  color: #fff;
   padding: 1rem 0.5rem 0rem 0.5rem !important;
-  color: #eb2f96;
   font-family: "Dancing Script", cursive;
   font-weight: 400;
   font-size: clamp(25px, 1.3rem, 1.5rem);
@@ -265,6 +286,7 @@ nav .form-inline button:hover, nav .form-inline button:focus {
 }
 
 .birthday-cakes .card-grid .card .card-img img {
+  height: 300px !important;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -276,7 +298,6 @@ nav .form-inline button:hover, nav .form-inline button:focus {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  background-color: #fff !important;
   border: 0;
   font-family: "Josefin Sans", sans-serif;
   font-weight: lighter !important;
@@ -286,10 +307,13 @@ nav .form-inline button:hover, nav .form-inline button:focus {
 
 .birthday-cakes .card-grid .card .card-footer .btn-primary,
 .birthday-cakes .card-grid .card .card-footer .btn-secondary {
-  background-color: #f759ab !important;
+  background-color: #8c1a16 !important;
   color: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(-145deg, #922f2f, #ad3838);
+  -webkit-box-shadow: -5px -5px 0px #662121, 5px 5px 0px #de4747;
+          box-shadow: -5px -5px 0px #662121, 5px 5px 0px #de4747;
 }
 
 @media (max-width: 600px) {
@@ -300,22 +324,37 @@ nav .form-inline button:hover, nav .form-inline button:focus {
   }
 }
 
-.birthday-cakes .card-grid .card .card-footer .btn-primary:hover,
-.birthday-cakes .card-grid .card .card-footer .btn-secondary:hover {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-box-shadow: 0px 0px 15px #ff8cc0, 0px 0px 15px #ff8cc0;
-          box-shadow: 0px 0px 15px #ff8cc0, 0px 0px 15px #ff8cc0;
+.birthday-cakes .card-grid .card .card-footer .btn-primary:hover, .birthday-cakes .card-grid .card .card-footer .btn-primary:focus,
+.birthday-cakes .card-grid .card .card-footer .btn-secondary:hover,
+.birthday-cakes .card-grid .card .card-footer .btn-secondary:focus {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(145deg, #922f2f, #ad3838);
+  -webkit-box-shadow: 5px 5px 0px #662121, -5px -5px 0px #de4747;
+          box-shadow: 5px 5px 0px #662121, -5px -5px 0px #de4747;
 }
 
 .see-more {
   float: right;
   font-size: 0.9rem;
   font-family: "Jost", sans-serif;
-  background-color: #eb2f96;
+  background-color: #8c1a16;
   color: #fff;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   margin-right: 2rem;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.see-more:hover {
+  text-decoration: none;
+  background: #800000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 5px #a65850, 0px 0px 15px #993831;
+          box-shadow: 0px 0px 5px #a65850, 0px 0px 15px #993831;
 }
 
 @media (max-width: 600px) {
@@ -334,8 +373,11 @@ footer {
   width: 100%;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e6e9f0), to(#eef1f5));
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  padding: 2rem;
-  padding-bottom: 0;
+  padding: 0rem;
+}
+
+footer ol {
+  padding: 0 !important;
 }
 
 footer h2 {
@@ -353,6 +395,7 @@ footer .info-links {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   font-size: clamp(15px, 1rem, 1.1rem);
+  padding: 1rem;
 }
 
 footer .info-links .links {
@@ -411,7 +454,6 @@ footer li .info-links .links {
 }
 
 footer li a {
-  color: #000;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -423,7 +465,7 @@ footer li a {
 
 footer li a::after {
   content: "";
-  background: #eb2f96;
+  background: #8c1a16;
   position: absolute;
   z-index: -1;
   left: -5px;
@@ -463,10 +505,11 @@ footer .copyright {
   height: 60px;
   width: 100%;
   text-align: center;
-  color: #000;
+  color: #fff;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
   font-size: clamp(15px, 1rem, 1.1rem);
+  background-color: #8c1a16;
 }
 
 @media (max-width: 900px) {
