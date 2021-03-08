@@ -5,10 +5,11 @@ $jost: "Jost", sans-serif;
 $josefin: "Josefin Sans", sans-serif;
 $desktop: 840px;
 $mobile: 600px;
-$primary : #800000;
-$secondary : #8c1a16;
-$lighter : #a65850;
-$border : #993831;
+$tab: 800px;
+$primary: #800000;
+$secondary: #8c1a16;
+$lighter: #a65850;
+$border: #993831;
 @mixin desktop {
   @media (min-width: #{$desktop}) {
     @content;
@@ -17,6 +18,11 @@ $border : #993831;
 
 @mixin mobile {
   @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: #{$tab}) {
     @content;
   }
 }
@@ -40,16 +46,19 @@ $border : #993831;
 ::-webkit-scrollbar-thumb:hover {
   background: $secondary;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
 }
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   background-image: url("img/list.svg");
 }
-.navbar-toggler{
+.navbar-toggler {
   border: 0;
 }
 nav {
@@ -72,7 +81,7 @@ nav {
       background-color: #fff !important;
       color: $secondary !important;
     }
-    @include mobile(){
+    @include mobile() {
       padding-left: 1rem !important;
     }
   }
@@ -83,7 +92,6 @@ nav {
     font-weight: 400;
     letter-spacing: 0.1rem;
     transition: 0.3s;
-
   }
   #navbar {
     transition: all 0.5s ease;
@@ -117,7 +125,7 @@ nav {
       letter-spacing: 0.1rem;
       border-radius: 50px;
       color: #fff;
-      transition:0.3s;
+      transition: 0.3s;
       width: auto;
       &:focus {
         transition: 0.3s;
@@ -134,10 +142,11 @@ nav {
       background-color: #660003;
       color: #fff !important;
       transition: 0.3s;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: #fff !important;
         background-color: $primary !important;
-        border:4px solid $border !important;
+        border: 4px solid $border !important;
         transition: 0.3s;
       }
     }
@@ -145,17 +154,110 @@ nav {
 }
 
 .carousel-item {
-
   height: 90vh !important;
-  @include mobile(){
+  @include mobile() {
     height: 100% !important;
   }
   img {
     object-fit: cover;
   }
 }
+.offers{
+  background-color: white;
+  padding: 1.5rem;
+  h1{
+    color: black;
+  }
+  .offer-list{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-gap: 4rem;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    @include tab(){
+      grid-template-columns: repeat(1, 1fr);
+      h1{
+        font-size: 1.3rem;
+        padding:0.5rem;
+      }
+    }
+    .offer-image{
+      box-sizing: border-box;
+      img{
+        box-sizing: border-box;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .offer-info{
+      box-sizing: border-box;
+      h1{
+        width: 100%;
+        padding-top: 1rem;
+        color: black;
+        @include mobile(){
+          padding: 0.5rem;
+          margin: 0.5rem;
+        }
+      }
+      span{
+        font-size: 1.3rem;
+        @include mobile(){
+          font-size: 0.8rem;
+          margin-left: 0.5rem;
+        }
+      }
+      p{
+        padding: 1rem;
+        font-size: 1.3rem;
+        @include tab(){
+          font-size: 1.1rem;
+        }
+        @include mobile(){
+          font-size: 0.9rem;
+          padding-top: 0.5rem;
+          margin-bottom:1rem;
+        }
+      }
+      .button{
+        font-family: 'Josefin Sans', sans-serif;
+        margin-left: 1rem;
+        margin-right: 1.5rem;
+        padding: 1.2rem;
+        font-size: 1.3rem;
+        background-color: $secondary !important;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(-145deg, #922f2f, #ad3838);
+        box-shadow: 5px 5px 0px #662121, -5px -5px 0px #de4747;
+        @include mobile() {
+          font-size: 0.9rem !important;
+          padding: 0.9rem !important;
+        }
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
+          background: linear-gradient(145deg, #922f2f, #ad3838);
+          box-shadow: -5px -5px 0px #662121, 5px 5px 0px #de4747;
+        }
+      }
+      #line-through {
+        text-decoration: line-through;
+    }
+    }
+  }
+}
+.carousel-caption{
+  h5{
+    font-size: 2rem !important;
+    @include mobile(){
+      font-size: 1.3rem;
+    }
+  }
+}
 .birthday-cakes {
-
   h1 {
     text-align: center;
     font-family: $satisfy;
@@ -165,7 +267,7 @@ nav {
     margin: 0.5rem;
     margin-top: 2rem;
     font-weight: 800 !important;
-    @include mobile(){
+    @include mobile() {
       font-size: 1.1rem;
       text-align: left;
       margin-left: 0.5rem;
@@ -198,7 +300,6 @@ nav {
       &:hover {
         transition: 0.5s;
         box-shadow: 0px 0px 30px $lighter, 0px 0px 30px $lighter;
-
       }
       .details {
         .h4,
@@ -231,7 +332,7 @@ nav {
       .card-img {
         width: 100%;
         overflow: hidden;
-        
+
         img {
           height: 300px !important;
           width: 100%;
@@ -247,24 +348,24 @@ nav {
         font-weight: lighter !important;
         letter-spacing: 0.1rem;
         grid-gap: 1rem;
-        
+
         .btn-primary,
         .btn-secondary {
           background-color: $secondary !important;
           color: #fff;
           transition: all 0.3s ease-in-out;
           background: linear-gradient(-145deg, #922f2f, #ad3838);
-          box-shadow:  -5px -5px 0px #662121,
-                       5px 5px 0px #de4747;
-          @include mobile(){
+          box-shadow: 5px 5px 0px #662121, -5px -5px 0px #de4747;
+          @include mobile() {
             font-size: 0.6rem !important;
-            padding:0.6rem !important;
+            padding: 0.6rem !important;
           }
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             transition: all 0.2s ease-in-out;
             background: linear-gradient(145deg, #922f2f, #ad3838);
-            box-shadow:  5px 5px 0px #662121,
-                         -5px -5px 0px #de4747;          }
+            box-shadow: -5px -5px 0px #662121, 5px 5px 0px #de4747;
+          }
         }
       }
     }
@@ -280,7 +381,7 @@ nav {
   margin-right: 2rem;
   text-decoration: none;
   transition: 0.3s;
-  &:hover{
+  &:hover {
     text-decoration: none;
     background: $primary;
     transition: 0.3s;
@@ -290,7 +391,51 @@ nav {
   @include mobile() {
     margin-right: 0.5rem;
     font-size: 0.7rem;
-    padding:0.5rem 0.8rem 0.5rem 0.8rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  }
+}
+.deliver {
+  padding: 5rem;
+  background: $lighter;
+  h1{
+    color: #fff;
+    text-align: left;
+    padding-bottom: 2.5rem;
+    font-size: 2.5rem;
+  }
+  ol{
+    padding-left: 0.5rem;
+  }
+  li{
+    h1{
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+    p{
+      color: #fff;
+      padding: 1.5rem;
+      font-size: 1.2rem;
+    }
+  }
+  @include mobile(){
+    padding:1rem;
+    h1{
+      padding-bottom: 1rem;
+      padding-left: 0.5rem;
+      font-size: clamp(20px, 1.3rem, 2rem);
+
+    }
+    li{
+      h1{
+        font-size: clamp(20px, 1.1rem, 2rem);
+        padding-bottom: 1rem;
+        padding-left: 0.5rem;
+      }
+      p{
+        padding:0.5rem 0.5rem 0.5rem 2rem;
+        font-size: 0.8rem;
+      }
+    }
   }
 }
 footer {
@@ -302,7 +447,7 @@ footer {
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   padding: 0rem;
 
-  ol{
+  ol {
     padding: 0 !important;
   }
   h2 {
@@ -325,8 +470,8 @@ footer {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
       font-size: clamp(15px, 1rem, 1.1rem);
-      @include mobile(){
-        grid-template-columns: repeat(1,1fr);
+      @include mobile() {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
   }
@@ -412,7 +557,6 @@ footer {
 @media (max-width: 900px) {
   footer .info-links {
     grid-template-columns: repeat(1, 1fr);
-
   }
 }
 .about {
