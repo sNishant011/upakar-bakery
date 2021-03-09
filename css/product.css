@@ -53,6 +53,9 @@
   .product-details .product-grid .product-info p {
     font-size: 0.8rem;
   }
+.product-info .button {
+margin-left: 1rem;
+}
 }
 
 .product-details .product-grid .product-info .buttons {
